@@ -3,7 +3,7 @@ $(function ()
 	var manifestUrl = "http://zackheredia.github.io/HostedTimer/manifest.webapp";
 	var request = navigator.mozApps.checkInstalled(manifestUrl);
 	
-	alert("result"+request.result);
+	alert("result"+request);
 	$("#wrap").append("wata");
 
 	$("#btnInstall").click(function()
