@@ -8,7 +8,7 @@ $(function ()
 	$("#wrap").append("wata");
 
 	//alert(request.onsuccess);
-	request.onsuccess = function(e)
+	request.onsuccess = function()
 	{
 		alert("suces");
 		if (request.result)
@@ -25,7 +25,7 @@ $(function ()
 					$("#wrap").append("<p>La app se ha instalado en su dispositivo</p>");
 					$("#btnInstall").unbind("click");
 				}
-				req.onerror = function(e)
+				req.onerror = function()
 				{
 					$("#wrap").append("<p>Ocurrio un error durante la instalacion: " + this.error.name + "</p>");
 				}
@@ -37,6 +37,7 @@ $(function ()
 		$("#wrap").append("<p>Ocurrio un error verificando la instalacion: " + this.error.message + "</p>");
 	}
 
+	request.onsuccess();
 	$("#btnBack").click(function()
 	{
 		history.back();
