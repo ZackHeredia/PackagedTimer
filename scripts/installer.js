@@ -2,6 +2,9 @@ $(function ()
 {
 	var manifestUrl = "http://zackheredia.github.io/HostedTimer/manifest.webapp";
 	var request = navigator.mozApps.checkInstalled(manifestUrl);
+	
+	alert("result"+request.result);
+	$("#wrap").append("wata");
 
 	$("#btnInstall").click(function()
 	{
@@ -27,11 +30,12 @@ $(function ()
 function install (manifestUrl) 
 {
 	var request = navigator.mozApps.install(manifestUrl);
+	alert(request + "intall " + manifestUrl);
 
 	request.onsuccess = function()
 	{
-		$("#btnInstall").unbind("click");
 		$("#wrap").append("<p>La app se ha instalado en su dispositivo</p>");
+		$("#btnInstall").unbind("click");
 	}
 	request.onerror = function()
 	{
