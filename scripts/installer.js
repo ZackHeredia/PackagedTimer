@@ -1,7 +1,7 @@
 $(function ()
 {
 	var manifestUrl = location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp";
-	var request = navigator.mozApps.checkInstalled(manifestUrl);
+	var request = navigator.mozApps.getSelf();
 	
 	alert(request.result+" result "+request);
 	$("#wrap").append("wata");
