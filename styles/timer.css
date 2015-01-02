@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'DS-Digital';
+    src:url('../fonts/DS-Digital.ttf.woff') format('woff'),
+        url('../fonts/DS-Digital.ttf.svg#DS-Digital') format('svg'),
+        url('../fonts/DS-Digital.ttf.eot'),
+        url('../fonts/DS-Digital.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body    
+{
+    background: #555;
+}
+
+#wrap
+{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+#timer
+{
+    width: 350px;
+    height: 350px;
+    background-image: url("../images/timer350px.png");
+    position: relative;
+    margin: auto;
+}
+
+#time
+{
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    color: #FFF;
+    font-family: "DS-Digital";
+}
+
+.digital
+{
+    font-family: "DS-Digital";
+    font-size: 1.2em;
+}
+
+form
+{
+    position: absolute;
+    top: 230px;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 320px), (max-height: 320px) {
+    #timer
+    {
+        width: 300px;
+        height: 300px;
+        background-image: url("../images/timer300px.png");
+    }
+
+    #time
+    {
+        top: 110px;
+    }
+
+    form
+    {
+        top: 195px;
+    }
+
+    .button
+    {
+        font-size: .9em;
+        font-weight: bold;
+    }
+
+    #cambiar
+    {
+        width: 7em;
+    }
+
+    #inicializar
+    {
+        width: 4.8em;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+    #tittle
+    {
+        display: none;
+    }
+
+    #wrap
+    {
+        display: flex;
+        flex-direction: row;
+    }
+}

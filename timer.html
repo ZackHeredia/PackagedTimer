@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cronómetro</title><meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styles/timer.css">
+<script type="text/javascript" src="scripts/zepto.min.js"></script>
+<script type="text/javascript" src="scripts/touch.js"></script>
+<script type="text/javascript" src="scripts/croner.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <h2 id="tittle">Cronómetro</h2>
+    <div id="timer">
+        <h2 id="time"><span id="crono"> 0.0 </span> seg </h2>
+        <form>
+            <button type="button" id="cambiar" ><span class="button"> arrancar/parar </span></button>
+            <button type="button" id="inicializar"><span class="button">  inicializar </span></button>
+        </form>
+    </div>
+    <div id="divTimes">
+        <h4>Tiempos tomados:</h4>
+        <ol id="lstTimes"></ol>
+    </div>
+</div>
+</body>
+</html>
