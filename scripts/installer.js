@@ -8,6 +8,7 @@ $(function ()
 
 	$("#btnInstall").click(function()
 	{
+		alert(request.onsuccess);
 		request.onsuccess = function()
 		{
 			if (request.result)
