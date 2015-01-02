@@ -4,7 +4,7 @@ $(function ()
 	var request = navigator.mozApps.checkInstalled(manifestUrl);
 	alert(manifestUrl);
 	
-	alert(request.result+" result "+request);
+	//alert(request.result+" result "+request);
 	$("#wrap").append("wata");
 
 	//alert(request.onsuccess);
@@ -37,7 +37,7 @@ $(function ()
 		$("#wrap").append("<p>Ocurrio un error verificando la instalacion: " + this.error.message + "</p>");
 	}
 
-	request.onsuccess();
+	//request.onsuccess();
 	$("#btnBack").click(function()
 	{
 		history.back();
