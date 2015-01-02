@@ -1,6 +1,7 @@
 {
 	"version": "2.0",
 	"name": "CronometroAlojado",
+	"description": "Cronometro sencillo que recuerda los tiempos tomados.",
 	"launch_path": "/HostedTimer/timer.html",
 	"icons":
 	{
@@ -10,7 +11,7 @@
 	},
 	"developer":
 	{
-		"name": "Zacarys Heredia"
+		"name": "Zacarys Heredia",
 		"url": "http://ZackHeredia.github.io"
 	},
 	"default_locale": "es"
