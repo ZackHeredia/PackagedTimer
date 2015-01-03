@@ -4,9 +4,9 @@
 	"launch_path": "/HostedTimer/timer.html",
 	"icons":
 	{
-		"16": "/HostedTimer/images/icon_16.png",
-		"48": "/HostedTimer/images/icon_48.png",
-		"128": "/HostedTimer/images/icon_128.png"
+		"16": "/HostedTimer/images/ico_16.png",
+		"48": "/HostedTimer/images/ico_48.png",
+		"128": "/HostedTimer/images/ico_128.png"
 	},
 	"developer":
 	{

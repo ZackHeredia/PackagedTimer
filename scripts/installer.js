@@ -1,40 +1,32 @@
 $(function ()
 {
-	var manifestUrl = location.href.replace("index.html", "manifest.webapp");
+	var manifestUrl = location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp";
 	var request = navigator.mozApps.checkInstalled(manifestUrl);
-
-	$("#btnInstall").click(function ()
+	
+	if (request.error)
+		$("#wrap").append("<p>Ocurrio un error verificando la instalacion: " + request.error.message + "</p>");
+	else if (request.result)
+		$("#wrap").append("<p>Esta app ya esta instalada en su dispositivo</p>");
+	else
 	{
-		request.onsuccess = function ()
+		$("#btnInstall").click(function()
 		{
-			if (request.result)
-				$("#wrap").append("<p>Esta app Ya esta instalada en su dispositivo</p>");
-			else
-				install(manifestUrl);
-		}
-		request.onerror = function ()
-		{
-			$("#wrap").append("<p>Ocurrio un error verificando la instalacion: " + this.error.message + "</p>");
-		}
-	});
+			var req = navigator.mozApps.install(manifestUrl);
 
+			req.onsuccess = function()
+			{
+				$("#wrap").append("<p>La app se ha instalado en su dispositivo</p>");
+				$("#btnInstall").unbind("click");
+			}
+			req.onerror = function()
+			{
+				$("#wrap").append("<p>Ocurrio un error durante la instalacion: " + this.error.name + "</p>");
+			}
+		});
+	}
+	
 	$("#btnBack").click(function()
 	{
 		history.back();
 	});
 });
-
-function install (manifestUrl) 
-{
-	var request = navigator.mozApps.install(manifestUrl);
-
-	request.onsuccess = function ()
-	{
-		$("#btnInstall").unbind("click");
-		$("#wrap").append("<p>La app se ha instalado en su dispositivo</p>")
-	}
-	request.onerror = function ()
-	{
-		$("#wrap").append("<p>Ocurrio un error durante la instalacion: " + this.error.name + "</p>")
-	}
-}
