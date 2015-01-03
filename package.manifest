@@ -1,0 +1,10 @@
+{
+	"version": "2.0",
+	"name": "CronometroEmpaquetado",
+	"package_path": "http://ZackHeredia.github.io/PackagedTimer/PackagedTimer.zip",
+	"developer":
+	{
+		"name": "Zacarys Heredia"
+		"url": "http://ZackHeredia.github.io"
+	}
+}
